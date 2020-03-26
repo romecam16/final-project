@@ -14,6 +14,6 @@ public class YourCartSteps {
 	}
 	@Then("I will be able to Add Products to the Cart")
 	public void i_will_be_able_to_Add_Products() {
-	    // trabajamos en dos paginas: Products page y CheckOutPage
+
 	}
 }

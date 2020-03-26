@@ -19,6 +19,7 @@ public class Hooks {
 	
 	@Before
 	public void before() {
+		System.setProperty("webdriver.chrome-driver", String.valueOf(Thread.currentThread().getContextClassLoader().getResource("drivers/chromedriver.exe")));
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(5,  TimeUnit.SECONDS);
 		wait = new WebDriverWait(driver, 10);
