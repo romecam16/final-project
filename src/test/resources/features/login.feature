@@ -1,21 +1,22 @@
-Feature: Songs by Sinatra Login
+Feature: SauceDemo Login
   As a User
-  I want to log into Sinatra
-  So I can do CRUD on Songs
+  I want to log into SauceDemo
+  So I can buy products
 
-  Scenario: User can login succesfully
-    Given I navigate to Home Page
-    When I log into the site with credentials frank:sinatra
-    Then I will be in Home Page
-    And I will be able to Add a Song
+  Scenario: User can login successfully
+    Given I navigate to Login Page
+    When I log into the site with credentials standard_user:secret_sauce
+    Then I will be in Products Page
+    And I will be able to Add Products to the Cart
+
 
   Scenario Outline: User can not log in using wrong credentials
-    Given I navigate to Home Page
-    When I log into the site with credentials <bad_credentials>
+    Given I navigate to Products Page
+    When I log into the site with credentials <wrong_credentials>
     Then I will see a login error
 
     Examples: 
-      | bad_credentials |
-      | frenk:sinotra   |
-      | frank           |
-      |                 |
+      | wrong_credentials   |
+      | camilo:romero       |
+      | standard_user:romero|
+      | camilo:secret_sauce |

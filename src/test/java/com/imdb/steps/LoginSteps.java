@@ -1,21 +1,21 @@
 package com.imdb.steps;
 
 import com.imdb.hooks.Hooks;
-import com.imdb.pages.SinatraSite;
+import com.imdb.pages.SauceSite;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class LoginSteps {
-	SinatraSite sinatraSite;
+	SauceSite sauceSite;
 
 	public LoginSteps(Hooks hooksClass) {
-		this.sinatraSite = hooksClass.sinatraSite;
+		this.sauceSite = hooksClass.sauceSite;
 	}
 	@When("I log into the site with credentials {word}")
-	public void i_log_into_the_site_with_credentials_frank_sinatra(String credentials) {
-		//trabajo en dos paginas.  la home page, y la login page
-		sinatraSite.home().startLogin();
-		sinatraSite.login().loginCorrecto(credentials);
+	public void i_log_into_the_site_with_credentials(String credentials) {
+		//trabajo en dos paginas.  la login page, y la product page
+		sauceSite.login().loginCorrecto(credentials);
 	    
 	}
 	
@@ -27,4 +27,8 @@ public class LoginSteps {
 	}
 
 
+	@Given("I navigate to Login Page")
+	public void iNavigateToLoginPage() {
+		sauceSite.login().goTo();
+	}
 }
