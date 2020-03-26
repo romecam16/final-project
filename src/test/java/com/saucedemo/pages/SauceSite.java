@@ -1,4 +1,4 @@
-package com.imdb.pages;
+package com.saucedemo.pages;
 
 import org.openqa.selenium.WebDriver;
 

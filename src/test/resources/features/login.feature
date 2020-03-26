@@ -11,7 +11,7 @@ Feature: SauceDemo Login
 
 
   Scenario Outline: User can not log in using wrong credentials
-    Given I navigate to Products Page
+    Given I navigate to Login Page
     When I log into the site with credentials <wrong_credentials>
     Then I will see a login error
 

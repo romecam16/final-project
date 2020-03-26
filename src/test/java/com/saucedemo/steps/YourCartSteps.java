@@ -1,7 +1,7 @@
-package com.imdb.steps;
+package com.saucedemo.steps;
 
-import com.imdb.hooks.Hooks;
-import com.imdb.pages.SauceSite;
+import com.saucedemo.hooks.Hooks;
+import com.saucedemo.pages.SauceSite;
 import cucumber.api.java.en.Then;
 
 public class YourCartSteps {

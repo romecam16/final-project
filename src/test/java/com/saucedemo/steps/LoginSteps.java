@@ -1,7 +1,7 @@
-package com.imdb.steps;
+package com.saucedemo.steps;
 
-import com.imdb.hooks.Hooks;
-import com.imdb.pages.SauceSite;
+import com.saucedemo.hooks.Hooks;
+import com.saucedemo.pages.SauceSite;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -9,14 +9,18 @@ import cucumber.api.java.en.When;
 public class LoginSteps {
 	SauceSite sauceSite;
 
+	@Given("I navigate to Login Page")
+	public void i_navigate_to_Login_Page() {
+		sauceSite.login().goTo();
+	}
+
 	public LoginSteps(Hooks hooksClass) {
 		this.sauceSite = hooksClass.sauceSite;
 	}
 	@When("I log into the site with credentials {word}")
-	public void i_log_into_the_site_with_credentials(String credentials) {
+	public void i_log_into_the_site_with_credentials (String credentials) {
 		//trabajo en dos paginas.  la login page, y la product page
 		sauceSite.login().loginCorrecto(credentials);
-	    
 	}
 	
 
@@ -27,8 +31,4 @@ public class LoginSteps {
 	}
 
 
-	@Given("I navigate to Login Page")
-	public void iNavigateToLoginPage() {
-		sauceSite.login().goTo();
-	}
 }

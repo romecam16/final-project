@@ -1,12 +1,12 @@
-package com.imdb.pages;
+package com.saucedemo.pages;
 
-import com.imdb.utils.Properties;
+import com.saucedemo.utils.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import com.imdb.utils.Utils;
+import com.saucedemo.utils.Utils;
 
 public class LoginPage extends BasePage {
 

@@ -1,4 +1,4 @@
-package com.imdb.utils;
+package com.saucedemo.utils;
 
 public class Utils {
 	

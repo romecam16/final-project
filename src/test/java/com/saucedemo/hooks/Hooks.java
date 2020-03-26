@@ -1,8 +1,8 @@
-package com.imdb.hooks;
+package com.saucedemo.hooks;
 
 import java.util.concurrent.TimeUnit;
 
-import com.imdb.pages.SauceSite;
+import com.saucedemo.pages.SauceSite;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -28,7 +28,6 @@ public class Hooks {
 	
 	@After
 	public void after() {
-
 		driver.quit();
 	}
 

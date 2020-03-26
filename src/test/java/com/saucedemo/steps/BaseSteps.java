@@ -1,12 +1,12 @@
-package com.imdb.steps;
+package com.saucedemo.steps;
 
 import org.openqa.selenium.WebDriver;
 
-import com.imdb.hooks.Hooks;
-import com.imdb.pages.ProductsPage;
-import com.imdb.pages.LoginPage;
-import com.imdb.pages.YourCartPage;
-import com.imdb.pages.CheckOutPage;
+import com.saucedemo.hooks.Hooks;
+import com.saucedemo.pages.ProductsPage;
+import com.saucedemo.pages.LoginPage;
+import com.saucedemo.pages.YourCartPage;
+import com.saucedemo.pages.CheckOutPage;
 
 public class BaseSteps {
 	protected WebDriver driver;
