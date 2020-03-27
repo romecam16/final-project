@@ -3,11 +3,16 @@ Feature: SauceDemo Login
   I want to log into SauceDemo
   So I can buy products
 
-  Scenario: User can login successfully
+  Scenario Outline: User can login successfully
     Given I navigate to Login Page
-    When I log into the site with credentials standard_user:secret_sauce
+    When I log into the site with credentials <credentials>
     Then I will be in Products Page
-    And I will be able to Add Products to the Cart
+
+    Examples:
+      | credentials                          |
+      | standard_user:secret_sauce           |
+      | problem_user:secret_sauce            |
+      | performance_glitch_user:secret_sauce |
 
 
   Scenario Outline: User can not log in using wrong credentials
@@ -20,3 +25,8 @@ Feature: SauceDemo Login
       | camilo:romero       |
       | standard_user:romero|
       | camilo:secret_sauce |
+
+    Scenario: Locked user can not login to the application
+      Given I navigate to Login Page
+      When I log into the site with credentials locked_out_user:secret_sauce
+      Then I will see a locked out error message

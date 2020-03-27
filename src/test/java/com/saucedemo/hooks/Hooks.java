@@ -19,8 +19,10 @@ public class Hooks {
 	
 	@Before
 	public void before() {
-		System.setProperty("webdriver.chrome-driver", String.valueOf(Thread.currentThread().getContextClassLoader().getResource("drivers/chromedriver.exe")));
+//		System.setProperty("webdriver.chrome.driver", String.valueOf(Thread.currentThread().getContextClassLoader().getResource("drivers/chromedriver.exe")));
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\cromerol\\Documents\\Repo2\\sauceDemoCR\\src\\test\\resources\\drivers\\chromedriver.exe");
 		driver = new ChromeDriver();
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5,  TimeUnit.SECONDS);
 		wait = new WebDriverWait(driver, 10);
 		sauceSite = new SauceSite(driver);

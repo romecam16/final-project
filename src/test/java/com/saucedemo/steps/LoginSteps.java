@@ -19,16 +19,19 @@ public class LoginSteps {
 	}
 	@When("I log into the site with credentials {word}")
 	public void i_log_into_the_site_with_credentials (String credentials) {
-		//trabajo en dos paginas.  la login page, y la product page
 		sauceSite.login().loginCorrecto(credentials);
 	}
 	
 
 	@Then("I will see a login error")
 	public void i_will_see_an_error_message() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new cucumber.api.PendingException();
+		sauceSite.login().isLoginErrorDisplayed();
+
 	}
 
 
+	@Then("I will see a locked out error message")
+	public void iWillSeeALockedOutErrorMessage() {
+		sauceSite.login().isLockedOutErrorMessageDisplayed();
+	}
 }

@@ -17,4 +17,4 @@ import org.junit.runner.RunWith;
                 "com.saucedemo.hooks"})
 
 
-public class LoginRunner {}
+public class TestRunner {}
